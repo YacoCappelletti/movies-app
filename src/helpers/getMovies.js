@@ -1,7 +1,9 @@
 export const getMovies = async (movie, page = 1) => {
   const url = `http://www.omdbapi.com/?apikey=313926ee&s=${movie}&type=movie&page=${page}`;
 
-  const resp = await fetch(url);
+  const resp = await fetch(url, {
+    referrerPolicy: "unsafe-url",
+  });
   const { Search } = await resp.json();
 
   try {

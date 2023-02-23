@@ -1,7 +1,9 @@
 export const getSeries = async (serie, page = 1) => {
   const url = `http://www.omdbapi.com/?apikey=313926ee&s=${serie}&type=series&page=${page}`;
 
-  const resp = await fetch(url);
+  const resp = await fetch(url, {
+    referrerPolicy: "unsafe_url",
+  });
   const { Search } = await resp.json();
 
   try {

@@ -1,18 +1,16 @@
-import { NavLink , Link} from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVideoCamera } from "@fortawesome/free-solid-svg-icons";
+
 export const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand fs-2" to="/">
-     
-              <div className="container d-flex align-items-cente ">
-                <img
-                  src="../../assets/video-camera.png"
-                  className="icon me-2 pb-"
-                ></img>
-                <h1>MoviesApp</h1>
-              </div>
+            <div className="d-flex align-items-center">
+              <h1>MoviesApp</h1>
+            </div>
           </Link>
           <button
             className="navbar-toggler"
